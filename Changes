@@ -1,4 +1,8 @@
 Revision history for Perl module Lingua::KO::MacKorean.
 
+0.02  Sat Oct 25 17:43:34 2003
+    - added old mappings in changes from version b02 to version b03/c01
+      according to KOREAN.TXT.
+
 0.01  Sun Sep 28 10:10:19 2003
     - original version;

@@ -4,6 +4,7 @@ README
 MANIFEST
 MacKorean.pm
 MacKorean.xs
+addition.map
 korean.map
 mkheader
 t/test.t

@@ -1,5 +1,5 @@
 
-BEGIN { $| = 1; print "1..36\n"; }
+BEGIN { $| = 1; print "1..38\n"; }
 END {print "not ok 1\n" unless $loaded;}
 
 use Lingua::KO::MacKorean;
@@ -63,6 +63,13 @@ print "\x81" eq encodeMacKorean("\x{20A9}")
 
 print "\xA1\xA1" eq encodeMacKorean("\x{3000}")
    && "\x{3000}" eq decodeMacKorean("\xA1\xA1")
+   ? "ok" : "not ok", " ", ++$loaded, "\n";
+
+print "\xA1\x4D" eq encodeMacKorean("\x{FE59}")
+   && "\x{FE59}" eq decodeMacKorean("\xA1\x4D")
+   ? "ok" : "not ok", " ", ++$loaded, "\n";
+
+print "\xA1\x4D" eq encodeMacKorean("(\x{F878}")
    ? "ok" : "not ok", " ", ++$loaded, "\n";
 
 print "\xB0\xA1" eq encodeMacKorean("\x{AC00}")
