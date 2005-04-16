@@ -61,7 +61,7 @@ decode(...)
     STDCHAR **lb, *tb;
   PPCODE:
     ref = NULL;
-    if (SvROK(ST(0))) {
+    if (0 < items && SvROK(ST(0))) {
 	ref = SvRV(ST(0));
 	if (SvTYPE(ref) == SVt_PVCV)
 	    has_cv = TRUE;
@@ -72,7 +72,7 @@ decode(...)
     }
     src = ref
 	? (1 < items) ? ST(1) : &PL_sv_undef
-	: ST(0);
+	: (0 < items) ? ST(0) : &PL_sv_undef;
 
     if (SvUTF8(src)) {
 	src = sv_mortalcopy(src);
@@ -119,7 +119,7 @@ encode(...)
     bool has_pv = 0;
   PPCODE:
     ref = NULL;
-    if (SvROK(ST(0))) {
+    if (0 < items && SvROK(ST(0))) {
 	ref = SvRV(ST(0));
 	if (SvTYPE(ref) == SVt_PVCV)
 	    has_cv = TRUE;
@@ -130,7 +130,7 @@ encode(...)
     }
     src = ref
 	? (1 < items) ? ST(1) : &PL_sv_undef
-	: ST(0);
+	: (0 < items) ? ST(0) : &PL_sv_undef;
 
     if (!SvUTF8(src)) {
 	src = sv_mortalcopy(src);

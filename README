@@ -1,9 +1,9 @@
-Lingua::KO::MacKorean version 0.02
+Lingua::KO::MacKorean version 0.03
 ================
 
 NAME
 
-Lingua::KO::MacKorean - transcoding between Mac OS Korean and Unicode
+Lingua::KO::MacKorean - transcoding between Mac OS Korean encoding and Unicode
 
 SYNOPSIS
 
@@ -13,7 +13,7 @@ SYNOPSIS
     $octet = encodeMacKorean($wchar);
 
    # $wchar : a string in Perl's Unicode format
-   # $octet : a string in Mac OS Korean
+   # $octet : a string in Mac OS Korean encoding
 
 DEPENDENCIES
 
@@ -33,14 +33,11 @@ INSTALLATION
     make test
     make install
 
-COPYRIGHT AND LICENCE
+COPYRIGHT AND LICENSE
 
-    Tomoyuki SADAHIRO
+SADAHIRO Tomoyuki <SADAHIRO@cpan.org>
 
-        bqw10602@nifty.com
-        http://homepage1.nifty.com/nomenclator/perl/
+Copyright(C) 2003-2005, SADAHIRO Tomoyuki. Japan. All rights reserved.
 
-    Copyright(C) 2003-2003, SADAHIRO Tomoyuki. Japan. All rights reserved.
-
-    This module is free software; you can redistribute it
-    and/or modify it under the same terms as Perl itself.
+This module is free software; you can redistribute it and/or
+modify it under the same terms as Perl itself.

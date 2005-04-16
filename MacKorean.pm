@@ -8,7 +8,7 @@ use vars qw($VERSION @ISA @EXPORT @EXPORT_OK %EXPORT_TAGS);
 require Exporter;
 require DynaLoader;
 
-$VERSION = '0.02';
+$VERSION = '0.03';
 @ISA = qw(Exporter DynaLoader);
 @EXPORT = qw(decodeMacKorean encodeMacKorean);
 @EXPORT_OK = qw(decode encode);
@@ -19,7 +19,7 @@ __END__
 
 =head1 NAME
 
-Lingua::KO::MacKorean - transcoding between Mac OS Korean and Unicode
+Lingua::KO::MacKorean - transcoding between Mac OS Korean encoding and Unicode
 
 =head1 SYNOPSIS
 
@@ -42,7 +42,7 @@ Lingua::KO::MacKorean - transcoding between Mac OS Korean and Unicode
     $octet = Lingua::KO::MacKorean::encode($wchar);
 
    # $wchar : a string in Perl's Unicode format
-   # $octet : a string in Mac OS Korean
+   # $octet : a string in Mac OS Korean encoding
 
 =head1 DESCRIPTION
 
@@ -52,13 +52,12 @@ This module provides decoding from/encoding to Mac OS Korean encoding
 In order to ensure roundtrip mapping, MacKorean encoding
 has some characters with mapping from a single MacKorean character
 to a sequence of Unicode characters and vice versa.
-Such characters includes C<0xAAF9> (MacKorean) from/to
+Such characters include C<0xAAF9> (MacKorean) from/to
 C<0xF862+0x0028+0x0032+0x0031+0x0029> (Unicode)
 for C<"Parenthesized number twenty-one">.
 
-This module provides functions to transcode between MacKorean
-encoding and Unicode, without information loss
-for every MacKorean character.
+This module provides functions to transcode between MacKorean and
+Unicode, without information loss for every MacKorean character.
 
 =head2 Functions
 
@@ -137,26 +136,24 @@ Please let him know if you find something wrong.
 
 =head1 AUTHOR
 
-  SADAHIRO Tomoyuki  SADAHIRO@cpan.org
+SADAHIRO Tomoyuki <SADAHIRO@cpan.org>
 
-  http://homepage1.nifty.com/nomenclator/perl/
+Copyright(C) 2003-2005, SADAHIRO Tomoyuki. Japan. All rights reserved.
 
-  Copyright(C) 2003-2003, SADAHIRO Tomoyuki. Japan. All rights reserved.
-
-This module is free software; you can redistribute it
-and/or modify it under the same terms as Perl itself.
+This module is free software; you can redistribute it and/or
+modify it under the same terms as Perl itself.
 
 =head1 SEE ALSO
 
 =over 4
 
 =item Map (external version) from Mac OS Korean encoding
-to Unicode 3.2 (version: b3,c1 2002-Dec-19)
+to Unicode 3.2 and later (version: c02 2005-Apr-05)
 
 L<http://www.unicode.org/Public/MAPPINGS/VENDORS/APPLE/KOREAN.TXT>
 
 =item Registry (external version) of Apple use of Unicode corporate-zone
-characters (version: b4,c1 2002-Dec-19)
+characters (version: c03 2005-Apr-04)
 
 L<http://www.unicode.org/Public/MAPPINGS/VENDORS/APPLE/CORPCHAR.TXT>
 

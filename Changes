@@ -1,5 +1,11 @@
 Revision history for Perl module Lingua::KO::MacKorean.
 
+0.03  Sat Apr 16 19:56:51 2005
+    - added mappings for 0x85-0x9F to C1 controls according to updated
+      KOREAN.TXT in www.unicode.org.
+    - added META.yml.
+    - added t/argu.t.
+
 0.02  Sat Oct 25 17:43:34 2003
     - added old mappings in changes from version b02 to version b03/c01
       according to KOREAN.TXT.
