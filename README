@@ -1,4 +1,4 @@
-Lingua::KO::MacKorean version 0.03
+Lingua::KO::MacKorean version 0.04
 ================
 
 NAME
@@ -37,7 +37,7 @@ COPYRIGHT AND LICENSE
 
 SADAHIRO Tomoyuki <SADAHIRO@cpan.org>
 
-Copyright(C) 2003-2005, SADAHIRO Tomoyuki. Japan. All rights reserved.
+Copyright(C) 2003-2007, SADAHIRO Tomoyuki. Japan. All rights reserved.
 
 This module is free software; you can redistribute it and/or
 modify it under the same terms as Perl itself.
